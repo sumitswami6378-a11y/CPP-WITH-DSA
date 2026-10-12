@@ -92,6 +92,33 @@ void insertatelement(Node* &head,Node* &rear,int element,int data){
     
 }
 
+void checkcir(Node* &head){
+
+    if (head == NULL)
+    {
+        return;
+    }
+
+    Node* temp = head;
+
+    while (temp->next != NULL)
+    {
+        
+        if (temp->next == head)
+        {
+            cout<<"circular"<<endl;
+            return;
+        }
+
+        temp = temp->next;
+        
+    }
+    
+    
+
+
+}
+
 int main(){
 
     Node* head = NULL;
@@ -121,6 +148,8 @@ int main(){
     insertatelement(head,rear,3,12);
 
       printlist(head);
+
+    checkcir(head);
 
 
 
